@@ -7,8 +7,7 @@ public class Vendedor {
     double totalDeVendas;
     double percentualDaComissao;
     double valorDaComissaoEmReais;
-    String perguntarSimouNao;
-
+    double perguntarSimouNao;
 
     public void obterDados(){
         Scanner leitor = new Scanner(System.in);
@@ -25,7 +24,6 @@ public class Vendedor {
         totalDeVendas = leitor.nextDouble();
 
         calcularComissao();
-
     }
 
     public void calcularComissao(){
@@ -48,7 +46,6 @@ public class Vendedor {
         System.out.println("PERCENTUAL DA COMISSÃO: " + percentualDaComissao + "%");
         System.out.println("VALOR DA COMISSÃO PAGA: R$ " + valorDaComissaoEmReais);
         System.out.println("-----------------------------");
-        //criar outro print
 
         exibirResposta();
     }
@@ -57,18 +54,17 @@ public class Vendedor {
         Scanner leitor = new Scanner(System.in);
         System.out.println("Calcular a comissão de outro vendedor?" );
         System.out.println("Digite 1 para sim e 0 para sair: ");
-        perguntarSimouNao = leitor.nextLine();
+        perguntarSimouNao = leitor.nextDouble();
+        digitar1();
     }
 
-    public void digitar1(){
-        if (perguntarSimouNao == 1 (){
+    public void digitar1() {
+        if (perguntarSimouNao == 1) {
+            obterDados();
+        } else {
+            System.out.print("Bye");
         }
-            percentualDaComissao = 5;
-        // se reposta == 1 obter dados
-      //  se 0 sair
     }
-
-
-
-
 }
+
+
